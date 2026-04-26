@@ -1,20 +1,26 @@
 # Olex-copy-front
 
-A React Native mobile app shell for a premium car marketplace.
+A React Native frontend for the premium car marketplace copy.
 
-## What is included
+## Structure
 
-- `App.js`: main React Native entrypoint with a black-and-white premium UI.
-- `src/theme.js`: design system values from the documentation.
-- `src/data.js`: sample car listings and filter fields.
-- `src/components/BottomNav.js`: minimal bottom navigation.
-- `src/components/CarCard.js`: card component for listings.
+- `App.js`: entry point and screen routing logic.
+- `app.json`: Expo configuration for QR-code friendly startup.
+- `src/theme.js`: centralized color and typography tokens.
+- `src/data.js`: local fallback data and filter field definitions.
+- `src/api/cars.js`: backend API service abstraction.
+- `src/screens/`: page-level UI screens.
+- `src/components/`: reusable UI components.
 
 ## Run locally
 
-1. Install Node.js and Expo CLI if not already installed.
-2. Open `Olex-copy-front`.
-3. Run `npm install`.
-4. Run `npm start`.
+1. Open `Olex-copy-front`.
+2. Run `npm install`.
+3. Run `npm start`.
+4. Scan the Expo QR code on your phone or run on a simulator.
 
-The app is built to follow the document styles: minimal, luxury, clean, black & white.
+## Notes
+
+- The frontend now loads live car listings from the backend when available.
+- Local fallback data is used if backend fetch fails.
+- UI is organized into reusable screens and services for neat file management.

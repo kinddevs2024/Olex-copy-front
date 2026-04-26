@@ -1,4 +1,4 @@
-export const carData = [
+export const fallbackCars = [
   {
     id: "1",
     title: "No-name GT 2025",
