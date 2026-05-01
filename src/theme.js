@@ -46,4 +46,5 @@ export const theme = {
 export const layout = {
   padding: 18,
   spacing: 16,
+  radius: theme.radius,
 };
