@@ -7,14 +7,17 @@ export default function BottomNav({ tabs, activeTab, onTabPress }) {
     <View style={styles.navContainer}>
       {tabs.map((tab) => (
         <Pressable
-          key={tab}
-          onPress={() => onTabPress(tab)}
+          key={tab.key}
+          onPress={() => onTabPress(tab.key)}
           style={styles.tabButton}
         >
           <Text
-            style={[styles.tabText, activeTab === tab && styles.activeTabText]}
+            style={[
+              styles.tabText,
+              activeTab === tab.key && styles.activeTabText,
+            ]}
           >
-            {tab}
+            {tab.label}
           </Text>
         </Pressable>
       ))}
@@ -46,6 +49,6 @@ const styles = StyleSheet.create({
     fontWeight: "700",
   },
   activeTabText: {
-    color: theme.colors.textPrimary,
+    color: theme.colors.primary,
   },
 });
